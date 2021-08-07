@@ -54,7 +54,7 @@ class LoginController extends Controller
 
         $this->_registerOrLoginUser($user);
 
-        return redirect()->route('home');
+        return  view('google');
     }
 
     // facebook login
@@ -70,7 +70,7 @@ class LoginController extends Controller
 
         $this->_registerOrLoginUser($user);
 
-        return redirect()->route('home');
+        return view('facebook');
     }
 
     // github login
@@ -86,7 +86,7 @@ class LoginController extends Controller
 
         $this->_registerOrLoginUser($user);
 
-        return redirect()->route('home');
+        return view('github');
     }
 
     protected function _registerOrLoginUser($data)
