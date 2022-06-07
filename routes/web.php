@@ -18,18 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', function () {
-    return view('google');
-});
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -43,13 +31,3 @@ Route::get('/login/facebook/callback', [App\Http\Controllers\Auth\LoginControlle
 Route::get('/login/github', [App\Http\Controllers\Auth\LoginController::class, 'redirectToGithub'])->name('login.github');
 Route::get('/login/github/callback', [App\Http\Controllers\Auth\LoginController::class, 'handleGithubCallback']);
 
-
-/*Route::get('/auth/google/redirect', function () {
-    return Socialite::driver('google')->redirect();
-});
-
-Route::get('/auth/google/callback', function () {
-    $user = Socialite::driver('google')->user();
-
-    // $user->token
-});*/

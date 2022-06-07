@@ -35,7 +35,7 @@
 
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-3">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" autofocus placeholder="Password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
